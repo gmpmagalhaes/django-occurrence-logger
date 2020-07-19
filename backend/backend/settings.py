@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'rest_framework',
+    'rest_framework_gis',
+
     'occurrences',
     'users',
 ]
@@ -101,6 +104,20 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Django_restframework
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        #'rest_framework.permissions.IsAuthenticated'
+    ,),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+    ,),
+    'DEFAULT_FILTER_BACKENDS': (
+    
+    ,)
+}
 
 
 # Internationalization
