@@ -1,5 +1,5 @@
 from django.contrib.gis.db import models
-from django.contrib.auth.models import User
+from users.models import CustomUser as User
 
 class Occurrence(models.Model):
     CON = 'CONSTRUCTION'
