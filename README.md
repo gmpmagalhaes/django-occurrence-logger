@@ -59,9 +59,9 @@ localhost:8000
 
 # Follow the wiki for more information on the API Endpoints
 
-**_Please read the wiki for further information. [Wiki](https://github.com/gmpmagalhaes/django-postgis-docker/wiki/Home)_**
+**_Please read the wiki for further information. [Wiki](https://github.com/gmpmagalhaes/django-occurrence-logger/wiki/Home)_**
 
 
 # License
 
-This project is available under the [MIT License](http://github.com/gmpmagalhaes/django-postgis-docker)
+This project is available under the [MIT License](http://github.com/gmpmagalhaes/django-occurrence-logger/)
