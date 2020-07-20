@@ -64,4 +64,4 @@ localhost:8000
 
 # License
 
-This project is available under the [MIT License](http://github.com/gmpmagalhaes/django-occurrence-logger/)
+This project is available under the [MIT License](https://github.com/gmpmagalhaes/django-occurrence-logger/blob/master/LICENSE.md)
