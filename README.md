@@ -10,6 +10,8 @@ Django-occurrence-logger is a django-based web application to report city relate
 
 > Django, PostgreSQL w/ PostGIS, Docker
 
+---
+
 # Instructions
 
 Requires the use of [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/).
