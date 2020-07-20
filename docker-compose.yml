@@ -6,3 +6,11 @@ services:
                         context: ./database
                 ports:
                         - 5432:5432
+        server:
+                build:
+                        context: ./backend
+                command: python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000
+                ports:
+                        - 8000:8000
+                depends_on:
+                        - postgres
