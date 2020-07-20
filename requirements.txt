@@ -14,6 +14,8 @@ django-filter==2.3.0
 djangorestframework==3.11.0
 djangorestframework-gis==0.15
 djangorestframework-simplejwt==4.4.0
+geographiclib==1.50
+geopy==2.0.0
 html5lib==1.0.1
 idna==2.8
 ipaddr==2.2.0
@@ -26,6 +28,7 @@ psycopg2-binary==2.8.5
 pycparser==2.20
 PyJWT==1.7.1
 pyparsing==2.4.6
+python-dotenv==0.14.0
 pytoml==0.1.21
 pytz==2020.1
 requests==2.22.0
