@@ -9,7 +9,7 @@ class CustomPermission(permissions.BasePermission):
     def has_permission(self, request, view):
         return request.user.is_authenticated or request.user.is_staff
     def has_object_permission(self, request, view, obj):
-        return view.action in ['retrieve', 'partial_update', 'destroy'] and request.user.is_staff or request.user == obj
+        return view.action in ['retrieve', 'partial_update', 'destroy'] and request.user == obj or request.user.is_staff
 
 class OccurrenceViewSet(viewsets.ModelViewSet):
     queryset = Occurrence.objects.all()
@@ -21,7 +21,7 @@ class OccurrenceViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         serializer_class = self.serializer_class
         if self.request.method == 'PUT':
-            serializer_class = UpdateOccurenceSerializer
+            serializer_class = UpdateOccurrenceSerializer
         return serializer_class
 
     def perform_create(self, serializer):
