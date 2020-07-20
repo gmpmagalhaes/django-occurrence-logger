@@ -1,3 +1,6 @@
+from django.urls import path, include
 from .routers import router
 
-urlpatterns = router.urls
+urlpatterns = [
+    path('', include((router.urls, 'backend'), namespace="occurrences")),
+]
