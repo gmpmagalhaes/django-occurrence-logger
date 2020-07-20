@@ -27,7 +27,7 @@ class OccurrenceFilter(django_filters.FilterSet):
         filter_dist = self.request.query_params.get('radius') or 10
         location_type = self.request.query_params.get('location_type') or 'COORDINATES'
         if local:
-            pnt = GEOSGeometry(getCoordsFromAddress(self, local), srid=4326)
+            pnt = GEOSGeometry(getCoordsFromAddress(local), srid=4326)
         else:
             pnt = GEOSGeometry('POINT(' + str(point[0]) + ' ' + str(point[1]) +')', srid=4326)
         queryset = queryset.filter(location__distance_lte=(pnt, D(km=float(filter_dist))))
