@@ -1,15 +1,13 @@
 import os
 from geopy.geocoders import Nominatim
-
-
-def getCoordsFromAddress(self, address):
-    geolocator = Nominatim(user_agent=os.getenv('GOOGLE_APPNAME'))
+geolocator = Nominatim(user_agent=os.getenv('GOOGLE_APPNAME'))
+    
+def getCoordsFromAddress(address):
     coordinates = geolocator.geocode(address)
-    pnt = 'POINT('+ str(coordinates.latitude) + ' ' + str(coordinates.longitude) + ')'
-    return pnt
+    return 'POINT('+ str(coordinates.longitude) + ' ' + str(coordinates.latitude) + ')'
+ 
 
-
-def getLocationFromCoords(self, coords):
-    geolocator = Nominatim(user_agent=os.getenv('GOOGLE_APPNAME'))
-    location =geolocator.reverse(str(coords[0]) + ', ' + str(coords[1]))
+def getLocationFromCoords(coords):
+    coords = str(coords[0]) + ', ' + str(coords[1])
+    location = geolocator.reverse( coords )
     return location.address
