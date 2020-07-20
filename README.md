@@ -25,8 +25,7 @@ $ git clone https://github.com/gmpmagalhaes/django-occurrence-logger
 Please create an environment file in the root of the project with an appropriate app name. See below:**
 ```sh
 $ cd django-occurrence-logger
-$ touch .env
-$ echo "GOOGLE_APPNAME=<your_app_name_goes_here>" > .env
+$ echo "GOOGLE_APPNAME=<your_app_name_goes_here>" > ./backend/.env
 ```
 
 ## Start Docker
@@ -35,7 +34,7 @@ Assuming you have docker installed.
 Example: ```$ sudo docker-compose build ```
 
 ```sh
-$ cd django-occurrence-logger # if not already from the previous step
+$ cd django-occurrence-logger # if not in root from previous step
 # build the docker image and start the container
 $ docker-compose build && docker-compose up -d
 ```
