@@ -9,7 +9,11 @@ class CustomPermission(permissions.BasePermission):
     def has_permission(self, request, view):
         return request.user.is_authenticated or request.user.is_staff
     def has_object_permission(self, request, view, obj):
-        return view.action in ['retrieve', 'partial_update', 'destroy'] and request.user == obj or request.user.is_staff
+        if view.action in ['retrieve', 'destroy']:
+            return request.user == obj or request.user.is_staff
+        if view.action == 'partial_update':
+            return request.user.is_staff
+
 
 class OccurrenceViewSet(viewsets.ModelViewSet):
     queryset = Occurrence.objects.all()
