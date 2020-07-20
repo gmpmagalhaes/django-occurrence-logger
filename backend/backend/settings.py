@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_gis',
 
+    'django_filters',
+
     'occurrences',
     'users',
     'authentication',
@@ -123,13 +125,13 @@ PASSWORD_HASHERS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
-        #'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
    'DEFAULT_FILTER_BACKENDS': (
-        
+        'django_filters.rest_framework.DjangoFilterBackend',
     )
 }
 
