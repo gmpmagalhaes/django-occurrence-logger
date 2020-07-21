@@ -49,9 +49,6 @@ INSTALLED_APPS = [
     'occurrences',
     'users',
     'authentication',
-
-    #testing
-    'coverage',
 ]
 
 MIDDLEWARE = [
