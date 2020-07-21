@@ -11,8 +11,7 @@ class CustomPermission(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         if view.action in ['retrieve', 'destroy']:
             return request.user == obj or request.user.is_staff
-        if view.action == 'partial_update':
-            return request.user.is_staff
+        return request.user.is_staff
 
 
 class OccurrenceViewSet(viewsets.ModelViewSet):
