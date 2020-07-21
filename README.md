@@ -40,6 +40,8 @@ $ docker-compose build && docker-compose up -d
 # run the migrations
 $ docker-compose exec server python manage.py makemigrations
 $ docker-compose exec server python manage.py migrate
+# please also create an admin user for admin-only endpoints
+$ docker-compose exec server python manage.py createsuperuser
 ```
 Both the server and database should be running on the background now.
 Check if running with:
