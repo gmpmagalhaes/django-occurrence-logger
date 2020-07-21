@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     'occurrences',
     'users',
     'authentication',
+
+    #testing
+    'coverage',
 ]
 
 MIDDLEWARE = [
@@ -90,7 +93,7 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'postgres',
         'USER': 'admin',
-        'HOST': 'postgres',
+        'HOST': 'localhost',
         'PASSWORD': 'password',
         'PORT': '5432'
     }
