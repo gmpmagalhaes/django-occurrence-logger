@@ -37,6 +37,9 @@ Example: ```$ sudo docker-compose build ```
 $ cd django-occurrence-logger # if not in root from previous step
 # build the docker image and start the container
 $ docker-compose build && docker-compose up -d
+# run the migrations
+$ docker-compose exec server python manage.py makemigrations
+$ docker-compose exec server python manage.py migrate
 ```
 Both the server and database should be running on the background now.
 Check if running with:
