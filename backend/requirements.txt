@@ -11,7 +11,7 @@ distlib==0.3.0
 distro==1.4.0
 Django==3.0.8
 django-filter==2.3.0
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 djangorestframework-gis==0.15
 djangorestframework-simplejwt==4.4.0
 geographiclib==1.50
